@@ -7,7 +7,7 @@ on:
 
 
 env:
-  IMAGE_NAME: rajsinghlpu/cicd-web
+  IMAGE_NAME: rajsingh9479/cicd-web
 
 
 jobs:
