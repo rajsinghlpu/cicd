@@ -2,32 +2,29 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: web
+  name: website
 
 spec:
-  replicas: 2
+  replicas: 3
 
   selector:
     matchLabels:
-      app: web
+      app: website
 
   template:
 
     metadata:
       labels:
-        app: web
+        app: website
 
     spec:
 
-      imagePullSecrets:
-      - name: dockerhub-secret
-
       containers:
+      - name: website
 
-      - name: nginx
-
-        image: rajsingh9479/cicd-web:latest
+        image: rajsingh9479/mywebsite:v1
 
         ports:
-
         - containerPort: 80
+
+        imagePullPolicy: Always
